@@ -1,12 +1,12 @@
 import { Box, Center, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HuggingFaceAPI } from "./api";
 
 
 
 const AudioUpload = (): JSX.Element => {
 
-    const [countDown, setCountDown] = useState<number>(20);
+    const [countDown, setCountDown] = useState<number>(10);
 
     useEffect(() => {
         const initializeModel = async () => {
@@ -18,7 +18,7 @@ const AudioUpload = (): JSX.Element => {
         void initializeModel();
     }, [])
 
-    //Count down timer based on countDown state and stop when countDown is 0
+    // Timer that counts down from countDown to 0 and updates the state every second
     useEffect(() => {
         const timer = setTimeout(() => {
             if (countDown > 0) {
@@ -29,13 +29,39 @@ const AudioUpload = (): JSX.Element => {
     }, [countDown]);
 
 
+    // Upload audio from local file system
+    const audioRef = useRef<HTMLAudioElement>(null);
+
+
+    const uploadAudio = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            const objectUrl = URL.createObjectURL(file);
+            if (audioRef.current) {
+                audioRef.current.src = objectUrl;
+                audioRef.current.play();
+            }
+        }
+    };
+    
+    
+
     return (
         <Center>
-            <Box>
-                <Text>Hei du har {countDown} sekund igjen å leva :p</Text>
-            </Box>
+            {countDown === 0 ? (
+                <Box>
+                    <Text>Model initialized. Please upload an audio file.</Text>
+                    <input type="file" onChange={uploadAudio} />
+                    <audio ref={audioRef} controls />
+                </Box>
+            ) : (
+                <Box>
+                    <Text>Initializing model. Please wait {countDown} seconds.</Text>
+                </Box>
+            )}
         </Center>
     );
+
 };
 
 export default AudioUpload;
