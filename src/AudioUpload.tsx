@@ -92,14 +92,16 @@ const AudioUpload = (): JSX.Element => {
                     <Box>
                         {loading ? <Text>Transcribing audio. Please wait.</Text> : <Button onClick={() => transcribeAudio(audio!)}>Transcribe</Button>}
                     </Box>
-                    // Display transcript if it exists
                     {transcript && (
                         <>
                             <Box padding="10px" borderRadius="2xl" bgColor="blue.800">
                                 <Textarea
                                     size="lg"
+                                    minWidth="600px"
+                                    minHeight="300px"
                                     value={transcript}
-                                    onChange={handleTranscriptChange}                                />
+                                    onChange={handleTranscriptChange}
+                                />
                             </Box>
                             <Button onClick={downloadTranscript}>Download Transcript</Button>
                         </>
