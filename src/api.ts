@@ -2,9 +2,9 @@ const HuggingFaceAPI = {
     initializeModel: async () => {
         console.log("start model")
         try {
-            const response = await fetch("https://api-inference.huggingface.co/models/openai/whisper-large-v2",
+            const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
-                    headers: { Authorization: `Bearer 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` },
+                    headers: { Authorization: `Bearer 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` },
                     method: "POST",
                     body: "start",
                 }
@@ -24,9 +24,9 @@ const HuggingFaceAPI = {
     transcribeAudio: async (audio: Blob) => {
         console.log("audio inference")
         try {
-            const response = await fetch("https://api-inference.huggingface.co/models/openai/whisper-large-v2",
+            const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
-                    headers: { Authorization: `Bearer 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`, Language: "no" },
+                    headers: { Authorization: `Bearer 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`},
                     method: "POST",
                     body: audio,
 

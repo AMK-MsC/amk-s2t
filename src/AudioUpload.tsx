@@ -1,5 +1,5 @@
-import { Box, Button, Center, Text, VStack } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { Box, Button, Center, Input, Text, Textarea, VStack } from "@chakra-ui/react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 import HuggingFaceAPI from "./api";
 
 
@@ -48,7 +48,7 @@ const AudioUpload = (): JSX.Element => {
             console.log(objectUrl);
             if (audioRef.current) {
                 audioRef.current.src = objectUrl;
-                audioRef.current.play();
+                //audioRef.current.play();
             }
         }
     };
@@ -64,12 +64,26 @@ const AudioUpload = (): JSX.Element => {
         setTranscript(response.text)
     };
 
+    const downloadTranscript = async () => {
+        const element = document.createElement("a");
+        const file = new Blob([transcript!], { type: 'text/plain' });
+        element.href = URL.createObjectURL(file);
+        element.download = `transcript.txt`;
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    }
+
+    const handleTranscriptChange = (event: { target: { value: SetStateAction<string | undefined>; }; }) => {
+        setTranscript(event.target.value);
+    }
+
+
 
 
     return (
         <Center>
             {countDown === 0 ? (
-                <VStack>
+                <VStack alignContent="center">
                     <Box>
                         <Text>Model initialized. Please upload an audio file.</Text>
                         <input type="file" onChange={uploadAudio} />
@@ -78,9 +92,18 @@ const AudioUpload = (): JSX.Element => {
                     <Box>
                         {loading ? <Text>Transcribing audio. Please wait.</Text> : <Button onClick={() => transcribeAudio(audio!)}>Transcribe</Button>}
                     </Box>
-                    <Box>
-                        <Text>{transcript}</Text>
-                    </Box>
+                    // Display transcript if it exists
+                    {transcript && (
+                        <>
+                            <Box padding="10px" borderRadius="2xl" bgColor="blue.800">
+                                <Textarea
+                                    size="lg"
+                                    value={transcript}
+                                    onChange={handleTranscriptChange}                                />
+                            </Box>
+                            <Button onClick={downloadTranscript}>Download Transcript</Button>
+                        </>
+                    )}
                 </VStack>
             ) : (
                 <Box>
