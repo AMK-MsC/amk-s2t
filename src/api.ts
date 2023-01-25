@@ -21,6 +21,25 @@ const HuggingFaceAPI = {
         }
     },
 
+    checkModel: async () => {
+        try {
+            const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
+                {
+                    headers: { Authorization: `Bearer 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` },
+                    method: "POST",
+                    body: "start",
+                }
+            )
+            console.log("check model")
+            if (response.status != 503) {
+                return true;
+            }
+        }
+        catch (error) {
+            console.log(`Error: ${error}`);
+        }
+    },
+
     transcribeAudio: async (audio: Blob) => {
         console.log("audio inference")
         try {

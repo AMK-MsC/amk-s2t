@@ -25,6 +25,21 @@ const AudioUpload = (): JSX.Element => {
         void initializeModel();
     }, [])
 
+    // check if model is initialized when countDown is divisible by 20
+    useEffect(() => {
+        const checkModel = async () => {
+            try {
+                const response = await HuggingFaceAPI.checkModel();
+                if (response) {
+                    setCountDown(0);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        void checkModel();
+    }, [countDown % 20 == 0 && countDown > 0])
+
     // Timer that counts down from countDown to 0 and updates the state every second
     useEffect(() => {
         const timer = setTimeout(() => {
