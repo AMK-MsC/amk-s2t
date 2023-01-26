@@ -124,7 +124,7 @@ const AudioUpload = (): JSX.Element => {
                 </VStack>
             ) : (
                 <Box>
-                    <Text>Initializing model. Please wait {countDown} seconds.</Text>
+                    <Text>Initializing model. Estimated time remaining: {countDown}s</Text>
                 </Box>
             )}
         </Center>

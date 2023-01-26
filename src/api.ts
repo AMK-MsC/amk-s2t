@@ -1,10 +1,10 @@
 const HuggingFaceAPI = {
     initializeModel: async () => {
-        console.log("start model")
+
         try {
             const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
-                    headers: { Authorization: `Bearer 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` },
+                    headers: { Authorization: `Bearer ${process.env.REACT_APP_HUGGINGFACE_TOKEN}` },
                     method: "POST",
                     body: "start",
                 }
@@ -23,9 +23,10 @@ const HuggingFaceAPI = {
 
     checkModel: async () => {
         try {
+            console.log("Access token: " + process.env.REACT_APP_HUGGINGFACE_TOKEN)
             const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
-                    headers: { Authorization: `Bearer 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` },
+                    headers: { Authorization: `Bearer ${process.env.REACT_APP_HUGGINGFACE_TOKEN}` },
                     method: "POST",
                     body: "start",
                 }
@@ -45,7 +46,7 @@ const HuggingFaceAPI = {
         try {
             const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
-                    headers: { Authorization: `Bearer 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`},
+                    headers: { Authorization: `Bearer ${process.env.REACT_APP_HUGGINGFACE_TOKEN}`},
                     method: "POST",
                     body: audio,
 
