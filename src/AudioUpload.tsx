@@ -1,4 +1,4 @@
-import { Box, Button, Center, Input, Text, Textarea, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, Input, SimpleGrid, Text, Textarea, VStack } from "@chakra-ui/react";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 import HuggingFaceAPI from "./api";
 
@@ -69,6 +69,7 @@ const AudioUpload = (): JSX.Element => {
     };
 
     const transcribeAudio = async (file: Blob) => {
+        setTranscript("");
         setLoading(true);
         if (!file) {
             return;
@@ -76,6 +77,10 @@ const AudioUpload = (): JSX.Element => {
         const response = await HuggingFaceAPI.transcribeAudio(file);
         console.log(response);
         setLoading(false);
+        if (response.text === "") {
+            setTranscript("No speech detected");
+            return;
+        }
         setTranscript(response.text)
     };
 
@@ -83,7 +88,7 @@ const AudioUpload = (): JSX.Element => {
         const element = document.createElement("a");
         const file = new Blob([transcript!], { type: 'text/plain' });
         element.href = URL.createObjectURL(file);
-        element.download = `transcript.txt`;
+        element.download = `transcription.txt`;
         document.body.appendChild(element); // Required for this to work in FireFox
         element.click();
     }
@@ -98,9 +103,8 @@ const AudioUpload = (): JSX.Element => {
     return (
         <Center>
             {countDown === 0 ? (
-                <VStack alignContent="center">
+                <SimpleGrid columns={1} alignContent="center" gap={5}>
                     <Box>
-                        <Text>Model initialized. Please upload an audio file.</Text>
                         <input type="file" onChange={uploadAudio} />
                         <audio ref={audioRef} controls />
                     </Box>
@@ -121,7 +125,7 @@ const AudioUpload = (): JSX.Element => {
                             <Button onClick={downloadTranscript}>Download Transcript</Button>
                         </>
                     )}
-                </VStack>
+                </SimpleGrid>
             ) : (
                 <Box>
                     <Text>Initializing model. Estimated time remaining: {countDown}s</Text>
