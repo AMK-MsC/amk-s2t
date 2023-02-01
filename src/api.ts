@@ -23,7 +23,6 @@ const HuggingFaceAPI = {
 
     checkModel: async () => {
         try {
-            console.log("Access token: " + process.env.REACT_APP_HUGGINGFACE_TOKEN)
             const response = await fetch("https://api-inference.huggingface.co/models/oyvindgrutle/amk-whisper",
                 {
                     headers: { Authorization: `Bearer ${process.env.REACT_APP_HUGGINGFACE_TOKEN}` },
