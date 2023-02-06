@@ -84,11 +84,13 @@ const AudioUpload = (): JSX.Element => {
         setTranscript(response.text)
     };
 
+    // download transcript as a doc file
     const downloadTranscript = async () => {
         const element = document.createElement("a");
-        const file = new Blob([transcript!], { type: 'text/plain' });
+        // file as .docx
+        const file = new Blob([transcript!], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
         element.href = URL.createObjectURL(file);
-        element.download = `transcription.txt`;
+        element.download = `transcription.docx`;
         document.body.appendChild(element); // Required for this to work in FireFox
         element.click();
     }
