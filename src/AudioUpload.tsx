@@ -8,6 +8,7 @@ const AudioUpload = (): JSX.Element => {
 
     const [countDown, setCountDown] = useState<number>(0);
     const [audio, setAudio] = useState<Blob>();
+    const [audioFile, setAudioFile] = useState<File>();
     const [loading, setLoading] = useState<boolean>(false);
     const [transcript, setTranscript] = useState<string>();
 
@@ -59,6 +60,7 @@ const AudioUpload = (): JSX.Element => {
         const file = event.target.files?.[0];
         if (file) {
             setAudio(file);
+            setAudioFile(file);
             const objectUrl = URL.createObjectURL(file);
             console.log(objectUrl);
             if (audioRef.current) {
@@ -90,7 +92,7 @@ const AudioUpload = (): JSX.Element => {
         // file as .docx
         const file = new Blob([transcript!], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
         element.href = URL.createObjectURL(file);
-        element.download = `transcription.docx`;
+        element.download = `${audioFile!.name.slice(0, -4)}.doc`;
         document.body.appendChild(element); // Required for this to work in FireFox
         element.click();
     }
