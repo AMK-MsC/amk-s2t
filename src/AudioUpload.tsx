@@ -81,7 +81,7 @@ const AudioUpload = (): JSX.Element => {
             setTranscript("No speech detected");
             return;
         }
-        setTranscript(response.text)
+        setTranscript(response.text.trim())
     };
 
     // download transcript as a doc file
