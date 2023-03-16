@@ -1,55 +1,17 @@
-import { Box, Button, Center, Input, SimpleGrid, Text, Textarea, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, HStack, Input, SimpleGrid, Text, Textarea, VStack } from "@chakra-ui/react";
 import { SetStateAction, useEffect, useRef, useState } from "react";
-import HuggingFaceAPI from "./api";
+import API from "./api";
 
 
 
 const AudioUpload = (): JSX.Element => {
 
-    const [countDown, setCountDown] = useState<number>(0);
-    const [audio, setAudio] = useState<Blob>();
+    const [audio, setAudio] = useState<File>();
     const [audioFile, setAudioFile] = useState<File>();
     const [loading, setLoading] = useState<boolean>(false);
     const [transcript, setTranscript] = useState<string>();
+    const [audioUrl, setAudioUrl] = useState<string>();
 
-    useEffect(() => {
-        const initializeModel = async () => {
-            try {
-                const response = await HuggingFaceAPI.initializeModel();
-                setCountDown(parseInt(response.estimated_time))
-                console.log(countDown)
-            } catch (error) {
-                console.log(error);
-            }
-        }
-
-        void initializeModel();
-    }, [])
-
-    // check if model is initialized when countDown is divisible by 20
-    useEffect(() => {
-        const checkModel = async () => {
-            try {
-                const response = await HuggingFaceAPI.checkModel();
-                if (response) {
-                    setCountDown(0);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        void checkModel();
-    }, [countDown % 20 == 0 && countDown > 0])
-
-    // Timer that counts down from countDown to 0 and updates the state every second
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            if (countDown > 0) {
-                setCountDown(countDown - 1);
-            }
-        }, 1000);
-        return () => clearTimeout(timer);
-    }, [countDown]);
 
 
     // Upload audio from local file system
@@ -71,19 +33,15 @@ const AudioUpload = (): JSX.Element => {
     };
 
     const transcribeAudio = async (file: Blob) => {
-        setTranscript("");
         setLoading(true);
         if (!file) {
+            setLoading(false);
             return;
         }
-        const response = await HuggingFaceAPI.transcribeAudio(file);
+        const response = await API.transcribeAudio(file);
         console.log(response);
         setLoading(false);
-        if (response.text === "") {
-            setTranscript("No speech detected");
-            return;
-        }
-        setTranscript(response.text.trim())
+        setTranscript(response);
     };
 
     // download transcript as a doc file
@@ -101,40 +59,57 @@ const AudioUpload = (): JSX.Element => {
         setTranscript(event.target.value);
     }
 
+    // download transcript as a srt file
+
+    const downloadTranscriptSrt = async () => {
+        const element = document.createElement("a");
+
+
+        const file = new Blob([transcript!], { type: 'application/octet-stream' });
+        element.href = URL.createObjectURL(file);
+        element.download = `${audioFile!.name.slice(0, -4)}.srt`;
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    }
+
 
 
 
     return (
         <Center>
-            {countDown === 0 ? (
-                <SimpleGrid columns={1} alignContent="center" gap={5}>
-                    <Box>
-                        <input type="file" onChange={uploadAudio} />
-                        <audio ref={audioRef} controls />
-                    </Box>
-                    <Box>
-                        {loading ? <Text>Transcribing audio. Please wait.</Text> : <Button onClick={() => transcribeAudio(audio!)}>Transcribe</Button>}
-                    </Box>
-                    {transcript && (
-                        <>
-                            <Box padding="10px" borderRadius="2xl" bgColor="blue.800">
-                                <Textarea
-                                    size="lg"
-                                    minWidth="600px"
-                                    minHeight="300px"
-                                    value={transcript}
-                                    onChange={handleTranscriptChange}
-                                />
-                            </Box>
-                            <Button onClick={downloadTranscript}>Download Transcript</Button>
-                        </>
-                    )}
-                </SimpleGrid>
-            ) : (
+            <SimpleGrid columns={1} alignContent="center" gap={5}>
                 <Box>
-                    <Text>Initializing model. Estimated time remaining: {countDown}s</Text>
+                    <input type="file" onChange={uploadAudio} />
+                    <audio ref={audioRef} controls />
                 </Box>
-            )}
+                <Box>
+                    <Button
+                        isLoading={loading}
+                        loadingText='Submitting'
+                        //colorScheme='teal'
+                        variant='outline'
+                        onClick={() => transcribeAudio(audio!)}>Transcribe
+                    </Button>
+                </Box>
+                {transcript && (
+                    <>
+                        <Box padding="10px" borderRadius="2xl">
+                            <Textarea
+                                size="lg"
+                                minWidth="600px"
+                                minHeight="300px"
+                                value={transcript}
+                                onChange={handleTranscriptChange}
+                            />
+                        </Box>
+                        {/* whenClicked is a property not an event, per se. */}
+                        <HStack>
+                            <Button onClick={downloadTranscript}>Download Transcript as .doc</Button>
+                            <Button onClick={downloadTranscriptSrt}>Download Transcript as .srt</Button>
+                        </HStack>
+                    </>
+                )}
+            </SimpleGrid>
         </Center>
     );
 
