@@ -33,3 +33,17 @@ def generate_srt_text(input_data):
 
         segment_index += 1
     return output_text
+
+def generate_doc_text(input_data):
+    count = 0
+    output_text = ""
+    for segment_data in list(input_data):
+        text = segment_data['text']
+        if count == 0:
+            output_text += f"MO: {text.strip()}\n"
+            count = (count + 1) % 2
+        else:
+            output_text += f"I: {text.strip()}\n"
+            count = (count + 1) % 2
+
+    return output_text

@@ -3,7 +3,8 @@ from flask_cors import CORS
 from transformers import WhisperForConditionalGeneration, WhisperProcessor, GenerationConfig, pipeline
 import librosa
 import torch
-from lib import generate_srt_file, generate_srt_text
+from lib import generate_srt_file, generate_srt_text, generate_doc_text
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -62,9 +63,14 @@ def transcribe_audio():
 
     # generate_srt_file(prediction, "{audio_file.filename.split('.')[0]}.srt")
     srt_text = generate_srt_text(prediction)
-    print(prediction)
+    doc_text = generate_doc_text(prediction)
 
-    return jsonify(srt_text)
+    data = {}
+    data['doc_text'] = doc_text
+    data['srt_text'] = srt_text
+
+
+    return jsonify(data)
 
         
 if __name__ == '__main__':
