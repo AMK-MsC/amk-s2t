@@ -9,7 +9,8 @@ const AudioUpload = (): JSX.Element => {
     const [audio, setAudio] = useState<File>();
     const [audioFile, setAudioFile] = useState<File>();
     const [loading, setLoading] = useState<boolean>(false);
-    const [transcript, setTranscript] = useState<string>();
+    const [srtTranscript, setSrt] = useState<string>();
+    const [docTranscript, setDocTranscript] = useState<string>();
     const [audioUrl, setAudioUrl] = useState<string>();
 
 
@@ -39,16 +40,16 @@ const AudioUpload = (): JSX.Element => {
             return;
         }
         const response = await API.transcribeAudio(file);
-        console.log(response);
         setLoading(false);
-        setTranscript(response);
+        setDocTranscript(response.doc_text);
+        setSrt(response.srt_text);
     };
 
     // download transcript as a doc file
     const downloadTranscript = async () => {
         const element = document.createElement("a");
         // file as .docx
-        const file = new Blob([transcript!], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+        const file = new Blob([docTranscript!], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
         element.href = URL.createObjectURL(file);
         element.download = `${audioFile!.name.slice(0, -4)}.doc`;
         document.body.appendChild(element); // Required for this to work in FireFox
@@ -56,7 +57,7 @@ const AudioUpload = (): JSX.Element => {
     }
 
     const handleTranscriptChange = (event: { target: { value: SetStateAction<string | undefined>; }; }) => {
-        setTranscript(event.target.value);
+        setDocTranscript(event.target.value);
     }
 
     // download transcript as a srt file
@@ -65,7 +66,7 @@ const AudioUpload = (): JSX.Element => {
         const element = document.createElement("a");
 
 
-        const file = new Blob([transcript!], { type: 'application/octet-stream' });
+        const file = new Blob([srtTranscript!], { type: 'application/octet-stream' });
         element.href = URL.createObjectURL(file);
         element.download = `${audioFile!.name.slice(0, -4)}.srt`;
         document.body.appendChild(element); // Required for this to work in FireFox
@@ -85,24 +86,23 @@ const AudioUpload = (): JSX.Element => {
                 <Box>
                     <Button
                         isLoading={loading}
-                        loadingText='Submitting'
+                        //loadingText='Submitting'
                         //colorScheme='teal'
                         variant='outline'
                         onClick={() => transcribeAudio(audio!)}>Transcribe
                     </Button>
                 </Box>
-                {transcript && (
+                {docTranscript && (
                     <>
                         <Box padding="10px" borderRadius="2xl">
                             <Textarea
                                 size="lg"
                                 minWidth="600px"
                                 minHeight="300px"
-                                value={transcript}
+                                value={docTranscript}
                                 onChange={handleTranscriptChange}
                             />
                         </Box>
-                        {/* whenClicked is a property not an event, per se. */}
                         <HStack>
                             <Button onClick={downloadTranscript}>Download Transcript as .doc</Button>
                             <Button onClick={downloadTranscriptSrt}>Download Transcript as .srt</Button>
