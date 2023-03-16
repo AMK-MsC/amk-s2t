@@ -13,7 +13,7 @@ pipe = pipeline(
   device=device,
 )
 
-audio_file = "Lydlogg-2-test-113.wav"
+audio_file = "audio/113-samtale_part0.wav"
 
 audio, _ = librosa.load(audio_file, sr=16000)
 

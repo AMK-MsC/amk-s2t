@@ -1,484 +1,520 @@
 1
 00:00:00,000 --> 00:00:02,000
-Telefon ringer.
+I:  Telefonkjeller.
 
 2
-00:00:05,000 --> 00:00:08,000
-Ner. Nødvendig ambulansen, er pasienten våken?
+00:00:05,000 --> 00:00:06,000
+I:  Medicinsk nødtelefon.
 
 3
-00:00:08,000 --> 00:00:12,000
-Ja, ja, ja. Eller, ja, jeg tror det.
+00:00:06,000 --> 00:00:13,000
+MO:  Hei, hei, Moni Hansen som ringer. Kona mi ligger på bakken, jeg vet ikke hva jeg skal gjøre. Hun svarer meg ikke når jeg snakker til henne. Hun bare falt sammen.
 
 4
-00:00:12,000 --> 00:00:17,000
-Det er Arne og Rasmus som ringer, og jeg ringer om kona mi, Margit.
+00:00:13,000 --> 00:00:15,000
+MO:  Hvilken adresse trenger du hjelp fra?
 
 5
-00:00:17,000 --> 00:00:20,000
-Hun er 87 år og ligger på bakken og kommer ikke opp nå.
+00:00:15,000 --> 00:00:27,000
+MO:  Vi er, vi er, ute på Langevåg der. Vi er på hytta skjønner du. Altså på den øya som ligger ute på det vannet ved Langevåg.
 
 6
-00:00:20,000 --> 00:00:21,000
-Jeg vet ikke helt hva jeg skal gjøre.
+00:00:28,000 --> 00:00:30,000
+I:  Den store øya, Storøya, Storøya.
 
 7
-00:00:21,000 --> 00:00:25,000
-Nei, men jeg skal hjelpe deg. Hvilken adress er dere på?
+00:00:31,000 --> 00:00:33,000
+MO:  Hytta bakerst på av de veiene hyttene som ligger der.
 
 8
-00:00:28,000 --> 00:00:29,000
-Vi er i øvre Frydendal, 437.
+00:00:33,000 --> 00:00:36,000
+I:  Bare følg veien innover fra brygga, også den bakerste hytta.
 
 9
-00:00:33,000 --> 00:00:33,000
-Ute på Frydendal, ute i Askeles.
+00:00:37,000 --> 00:00:38,000
+I:  Hele veien, bare hele veien innover.
 
 10
-00:00:34,000 --> 00:00:35,000
-Ja, er dere ute?
+00:00:39,000 --> 00:00:40,000
+I:  Og den er gul, hytta vår er gul.
 
 11
-00:00:37,000 --> 00:00:37,000
-Nei, vi er inne i leiligheten vår.
+00:00:41,000 --> 00:00:42,000
+I:  Hun ligger ute på verandaen.
 
 12
-00:00:37,000 --> 00:00:40,000
-Ja. I sjøttetetasje leiligheten vår.
+00:00:42,000 --> 00:00:44,000
+I:  Eva, Eva! Hører du meg Eva?
 
 13
-00:00:40,000 --> 00:00:42,000
-Vi står to rannstattig på ringflokka.
+00:00:44,000 --> 00:00:49,000
+MO:  Er hun våken nå? Nei, det skjer ingenting her. Eva, Eva! Hører du meg?
 
 14
-00:00:42,000 --> 00:00:42,000
-Ja.
+00:00:49,000 --> 00:00:53,000
+MO:  Nå sender jeg ambulanse mens vi snakker sammen. Ja, ja, dere må komme med en gang.
 
 15
-00:00:43,000 --> 00:00:44,000
-Hva er det som skjedde for noe?
+00:00:53,000 --> 00:00:59,000
+MO:  Kan du se om hun. Men de må ro ut. De må ro ut her. Vi er på en øy. Eva!
 
 16
-00:00:45,000 --> 00:00:48,000
-Nei, jeg hadde bare vært på toalett, så når jeg kom ut igjen så ligger hun på bakken her.
+00:00:59,000 --> 00:01:08,000
+MO:  Kan du se om hun puster? Jeg vet ikke om hun puster. Jeg vet ikke. Eva! Kan du høre meg Eva? Hallo? Nei hun reagerer ikke.
 
 17
-00:00:48,000 --> 00:00:51,000
-Margit, er du våken? Margit? Ja da, hun ser på meg altså.
+00:01:08,000 --> 00:01:11,000
+MO:  Da prøver jeg å klype i henne nå, se om du får noen reaksjon.
 
 18
-00:00:51,000 --> 00:00:54,000
-Ja. Hun ligger på bakken og jeg får hun ikke opp det altså.
+00:01:11,000 --> 00:01:17,000
+MO:  Ja da stønner hun når jeg klyper. Oi jeg kan ikke klype så hardt. Eva! Eva! Du må våkne.
 
 19
-00:00:54,000 --> 00:00:57,000
-Jeg husker ikke selv, så jeg kler ikke å løfte opp Margit, hun er en store dame.
+00:01:17,000 --> 00:01:21,000
+MO:  Hva skal vi gjøre? Hun er ikke så veldig syk fra før. Hun har hatt hjerteinfarkt, men ellers er hun ganske frisk altså.
 
 20
-00:00:57,000 --> 00:00:59,000
-Ja, svar hun ordentlig når du snakker med henne.
+00:01:21,000 --> 00:01:25,000
+I:  Ja vi er på vei for å hjelpe deg. Vi har tre barn og, offa meg.
 
 21
-00:00:59,000 --> 00:01:03,000
-Margit, ja, Margit. Ja da, hun svarer. Hun sier hun har vondt da, hun har slått seg litt.
+00:01:25,000 --> 00:01:28,000
+MO:  Nå må du undersøke om hun puster ordentlig.
 
 22
-00:01:03,000 --> 00:01:06,000
-Hun har vondt i hofta, sier hun. Vondt i hofta, sier hun. Ja. Ja, ja, ja, stakkard. Ja, for hun husvarer. Hun sier hun har vondt da hun har slått seg, hun har vondt i hofta, sier firen. Vondt i hofta, ja. Vondt i hofta, ja, ja, ja, stakka.
+00:01:28,000 --> 00:01:29,000
+MO:  Ja.
 
 23
-00:01:06,000 --> 00:01:07,000
-Ja, får hun puste normalt?
+00:01:29,000 --> 00:01:31,000
+MO:  Ser du at pusterne hever og senker seg?
 
 24
-00:01:07,000 --> 00:01:09,000
-Nei, unskyld meg, dette her var ikke bra. Hva sa du?
+00:01:32,000 --> 00:01:34,000
+MO:  Hun ligger på siden, det er vanskelig å se.
 
 25
-00:01:09,000 --> 00:01:11,000
-Får hun puste normalt?
+00:01:34,000 --> 00:01:36,000
+I:  Jeg vet ikke. Eva! Eva!
 
 26
-00:01:11,000 --> 00:01:17,000
-Ja, ja. Ja da, hun, det ser ut som hun puster ganske vanlig. Ja, Margit, får du puste? Ja.
+00:01:36,000 --> 00:01:37,000
+MO:  Legg hun over på ryggen og sjekk igjen.
 
 27
-00:01:17,000 --> 00:01:19,000
-Ja da, Margit puster. Ja, det går greit med pusten, sier hun.
+00:01:37,000 --> 00:01:40,000
+MO:  På ryggen? Vent litt da, da må jeg legge fra meg telefonen. Vent litt.
 
 28
-00:01:19,000 --> 00:01:22,000
-Ja, husker hun hvorfor hun falt?
+00:01:44,000 --> 00:01:47,000
+I:  Hallo? Hvis du setter telefonen litt på høytalder så kan vi snakke litt.
 
 29
-00:01:22,000 --> 00:01:24,000
-Vet du hvorfor du falt, Margit?
+00:01:47,000 --> 00:01:50,000
+I:  Ok, sånn, hvordan gjør jeg det nå?
 
 30
-00:01:24,000 --> 00:01:25,000
-Nei. Nei, nei, hun vet ikke hva som skjedde. Hun sier hun puster, så hun bare, hun skulle bare Vet du hvorfor hun falt, Margit?
+00:01:50,000 --> 00:01:51,000
+I:  Hallo?
 
 31
-00:01:25,000 --> 00:01:25,000
-Nei.
+00:01:51,000 --> 00:01:52,000
+MO:  Jeg hører deg.
 
 32
-00:01:25,000 --> 00:01:32,000
-Nei, hun vet ikke hva som skjedde. Hun sier hun plutselig så hun skulle bare reise opp og gå og hente noe, hun lå jo på gulvet. Hun er litt sur etter altså.
+00:01:52,000 --> 00:01:55,000
+MO:  Åh, ja, der, jeg hører deg. Eva, nå ligger hun på ryggen.
 
 33
-00:01:32,000 --> 00:01:35,000
-Så det er ikke alltid jeg får gode svar, men hun sier at hun ikke vet hva som skjedde.
+00:01:55,000 --> 00:02:00,000
+I:  Høymoder litt grann bakover også litt om hun puster skikkelig.
 
 34
-00:01:35,000 --> 00:01:36,000
-Okei, kult.
+00:02:00,000 --> 00:02:04,000
+MO:  Ja, vent litt da.
 
 35
-00:01:36,000 --> 00:01:39,000
-Kanskje hun har snublet i noe, jeg vet ikke. Det er noen tepper her, vi har de tepper.
+00:02:04,000 --> 00:02:07,000
+MO:  Ja, hun puster. Hun puster ganske vanlig ser det ut som.
 
 36
-00:01:40,000 --> 00:01:42,000
-Kanskje, jeg vet ikke.
+00:02:07,000 --> 00:02:12,000
+MO:  Er det noe rar lyd i pusten hennes, som noe gisping eller snorking?
 
 37
-00:01:42,000 --> 00:01:43,000
-Nei, nei.
+00:02:12,000 --> 00:02:16,000
+MO:  Nei det kommer ingen rare lyder. Nei Eva, Eva hører du meg? Hei.
 
 38
-00:01:43,000 --> 00:01:45,000
-Jeg tror nesten vi trenger en ambulanse og litt hjelp altså.
+00:02:16,000 --> 00:02:20,000
+MO:  Vi er på vei for å hjelpe dere. Ja det er langt ut her da, det er langt.
 
 39
-00:01:45,000 --> 00:01:48,000
-Ja, vi skal hjelpe dere. Vi skal sende en ambulanse og hjelpe dere.
+00:02:20,000 --> 00:02:25,000
+MO:  Skal jeg løpe til naboen kanskje? Nei, bare vær med Eva nå.
 
 40
-00:01:48,000 --> 00:01:49,000
-Ja, jeg blir litt rød da.
+00:02:25,000 --> 00:02:27,000
+MO:  Ja, ja.
 
 41
-00:01:49,000 --> 00:01:51,000
-Men det er Hosta som sier hun har vondt i.
+00:02:27,000 --> 00:02:29,000
+I:  Hvilken farge har hun i ansiktet?
 
 42
-00:01:51,000 --> 00:01:54,000
-Hun har vondt i Hosta, ja. Også sier hun at hun er litt svibbel.
+00:02:29,000 --> 00:02:32,000
+MO:  Vanlig farge i ansiktet.
 
 43
-00:01:54,000 --> 00:01:55,000
-Hun er svibbel, ja.
+00:02:32,000 --> 00:02:34,000
+MO:  Er hun blå på leppene?
 
 44
-00:01:55,000 --> 00:01:58,000
-Kjører ikke helt, ja. Hun snurrer litt, sier hun. Rommet snurrer litt.
+00:02:34,000 --> 00:02:36,000
+MO:  Nei, ikke blå på leppene.
 
 45
-00:01:58,000 --> 00:02:00,000
-Ja, kanskje hun falt på din vannmøll?
+00:02:36,000 --> 00:02:38,000
+I:  Eva, hører du meg?
 
 46
-00:02:00,000 --> 00:02:04,000
-Ja, kanskje. Jeg vet ikke. Jeg tror ikke jeg får noe svar på det altså.
+00:02:38,000 --> 00:02:39,000
+MO:  Når skjedde dette?
 
 47
-00:02:04,000 --> 00:02:06,000
-Nei. Pleier hun ikke å være svimmel?
+00:02:39,000 --> 00:02:43,000
+MO:  Det skjedde nå nettopp. Vi satt og spiste frokost, og plutselig bare datt hun av stolen.
 
 48
-00:02:06,000 --> 00:02:13,000
-Nei hun har ikke vært svimmel, nei det hun har ikke pleiet å pleie på det. Litt når hun reiser seg opp da. Sånn som ja alltid der alle viser meg, da glemmer hun ikke noe mer enn det.
+00:02:43,000 --> 00:02:45,000
+MO:  Ta å legg henne over på siden nå.
 
 49
-00:02:13,000 --> 00:02:15,000
-Nei, hun kan ikke være så blitt svimmel i dag da?
+00:02:45,000 --> 00:02:47,000
+MO:  Ja, ok vent litt da. Ja.
 
 50
-00:02:15,000 --> 00:02:18,000
-Nei hun pleier ikke det. Ja kanskje hun har blitt, ja jeg tror nesten det altså.
+00:02:52,000 --> 00:02:53,000
+MO:  Nå bare litt. Nei.
 
 51
-00:02:18,000 --> 00:02:19,000
-Er hun svimmel nå?
+00:02:54,000 --> 00:02:55,000
+I:  Nå ligger hun på siden. Ja.
 
 52
-00:02:19,000 --> 00:02:26,000
-Hun har en time hos fastlegen nå etterpå, egentlig klokka 11 altså. Så nå kommer det en time sykehviler uansett, det er ikke brevst.
+00:02:55,000 --> 00:02:57,000
+MO:  Ja, sjekk om hun fortsatt. Eva!
 
 53
-00:02:26,000 --> 00:02:26,000
-Ja.
+00:02:57,000 --> 00:02:59,000
+I:  Nå må du sjekke om hun. Hva? Hva sa du? Hva sier du?
 
 54
-00:02:26,000 --> 00:02:29,000
-Så kan vi ta det med fastlegen etter det.
+00:02:59,000 --> 00:03:01,000
+MO:  Hva puster normalt. Hva sa du?
 
 55
-00:02:29,000 --> 00:02:30,000
-Ja.
+00:03:01,000 --> 00:03:03,000
+MO:  Sjekk om hun fortsatt puster normalt. Ja, ja.
 
 56
-00:02:30,000 --> 00:02:30,000
-Ja.
+00:03:03,000 --> 00:03:05,000
+I:  Ja gjør hun det? Ja, hun fortsatt puster normalt. Ja, ja. Ja gjør hun det?
 
 57
-00:02:30,000 --> 00:02:31,000
-Ja, det er kanskje bra det.
+00:03:05,000 --> 00:03:07,000
+MO:  Ja, hun puster fortsatt normalt.
 
 58
-00:02:31,000 --> 00:02:33,000
-Men er det der Margit Svimmel nå?
+00:03:07,000 --> 00:03:08,000
+I:  Ja.
 
 59
-00:02:33,000 --> 00:02:36,000
-Ja, hun sier at hun er i Svimmel der hun ligger.
+00:03:12,000 --> 00:03:19,000
+I:  Nå er vi på vei for å hjelpe dere, men du sa på storøya og den bakerste hytta som er gul, er det riktig?
 
 60
-00:02:36,000 --> 00:02:36,000
-Ja.
+00:03:19,000 --> 00:03:21,000
+MO:  Innes i veien, ja, innes, helt innes i veien.
 
 61
-00:02:36,000 --> 00:02:39,000
-Er det sånn at hun føler hun holder på å besvime?
+00:03:21,000 --> 00:03:22,000
+I:  Innes i veien?
 
 62
-00:02:39,000 --> 00:02:44,000
-Holder hun på å besvime, Margit? Er hun? Ja, hun sier det.
+00:03:22,000 --> 00:03:23,000
+MO:  Ja, helt innes.
 
 63
-00:02:44,000 --> 00:02:44,000
-Ja.
+00:03:24,000 --> 00:03:26,000
+MO:  Fra brygga og så følger veien helt inn.
 
 64
-00:02:44,000 --> 00:02:47,000
-Hun føler litt sånn at hun smuler litt og holder på å besvime littit? Ja hun sier det. Hun føler seg litt sånn på å snulle litt og holde på å besvime litt ja.
+00:03:26,000 --> 00:03:28,000
+I:  Jeg vet ikke hva den veien her heter.
 
 65
-00:02:47,000 --> 00:02:51,000
-Ja akkurat. Klarer hun å snakke normalt synes du?
+00:03:28,000 --> 00:03:29,000
+I:  Den har kanskje ikke noen navn, jeg vet ikke.
 
 66
-00:02:51,000 --> 00:02:58,000
-Margit kan du si, Margit hører du meg? Ja da hun svarer meg med vanlig. Ja hun gjør det. Klarer hun å snakke altså.
+00:03:30,000 --> 00:03:32,000
+I:  Nei, men jeg ser på kartet hvor det reiser.
 
 67
-00:02:58,000 --> 00:03:02,000
-Kan du si heller å smile til deg? Ja. Klarer hun det?
+00:03:32,000 --> 00:03:33,000
+MO:  Eva, nå må du våkne. Eva!
 
 68
-00:03:02,000 --> 00:03:05,000
-Margit kan du smile? Ja, ja da.
+00:03:34,000 --> 00:03:36,000
+MO:  Hun reagerer ikke når jeg snakker til henne eller tar på henne noe.
 
 69
-00:03:05,000 --> 00:03:06,000
-Er hun smilet pent? Ja da.
+00:03:36,000 --> 00:03:39,000
+I:  Nei, prøv og klyp i henne igjen og se om du får en reaksjon på det.
 
 70
-00:03:06,000 --> 00:03:10,000
-Nei, alltid smilet pent, Margit, så hun smiler pent nå også. Ja.
+00:03:39,000 --> 00:03:41,000
+MO:  Ja, ja, ja.
 
 71
-00:03:10,000 --> 00:03:13,000
-Og greier hun å løpe armene sine når hun ligger der?
+00:03:42,000 --> 00:03:43,000
+MO:  Oi, der lager hun litt lyder. Ja.
 
 72
-00:03:13,000 --> 00:03:19,000
-Jeg vet ikke, hun ligger nå liksom på den høyre armen der da, så det er ikke så lett å se.
+00:03:44,000 --> 00:03:44,000
+I:  Våkner hun?
 
 73
-00:03:19,000 --> 00:03:21,000
-Nei, det er ikke så lett å få undersøkt.
+00:03:44,000 --> 00:03:45,000
+I:  Litt når jeg klyper henne hardt. Nei. Nei. Hun rører litt på den ene armen nå. Eva, ja. Oi, der lager hun litt lyder. Ja. Hvor gammel er hun?
 
 74
-00:03:21,000 --> 00:03:26,000
-Nei, nei. Nei, jeg vet ikke. Det var ikke sånn denne dagen skulle være. Nei. Hun ligger der. Nei, nei. Nei, jeg vet ikke. Det var ikke sånn denne dagen skulle være.
+00:03:45,000 --> 00:03:47,000
+I:  Litt så gammel jeg slipper henne hardt. Nei.
 
 75
-00:03:26,000 --> 00:03:27,000
-Nei.
+00:03:47,000 --> 00:03:49,000
+I:  Hun rører litt på den ene armen nå.
 
 76
-00:03:27,000 --> 00:03:28,000
-Hun ligger ikke der. Nei, nei.
+00:03:49,000 --> 00:03:51,000
+I:  Eva, Eva. Kan du høre meg Eva?
 
 77
-00:03:28,000 --> 00:03:32,000
-Kan du spørre henne om hun følte seg ustød da hun gikk i sted?
+00:03:51,000 --> 00:03:52,000
+I:  Hvor gammel er hun?
 
 78
-00:03:32,000 --> 00:03:37,000
-Ja, Margit, hvor følte du deg ustød, husker du, Margit? Nei, hun vet ikke.
+00:03:52,000 --> 00:03:54,000
+I:  Hun er 62.
 
 79
-00:03:37,000 --> 00:03:38,000
-Nei, hun vet ikke det.
+00:03:54,000 --> 00:03:56,000
+MO:  Har hun noen sykdommer fra før?
 
 80
-00:03:38,000 --> 00:03:40,000
-Hun bare kikker på meg og rister på hodet. Nei, hun klarer det ikke.
+00:03:56,000 --> 00:04:00,000
+MO:  Ja, hun har hatt et hjerteinfarkt for mange år siden, men ellers er hun veldig, veldig frisk.
 
 81
-00:03:40,000 --> 00:03:46,000
-Men i Øvre Fryndal 430-7 er det leilighet eller et hus?
+00:04:00,000 --> 00:04:02,000
+MO:  Veldig frisk.
 
 82
-00:03:46,000 --> 00:03:48,000
-Nei, der er blokk 16 etasjer.
+00:04:02,000 --> 00:04:05,000
+MO:  Og litt hypertension kanskje, tror jeg. Jeg vet ikke.
 
 83
-00:03:48,000 --> 00:03:49,000
-Der er blokk, ja.
+00:04:05,000 --> 00:04:07,000
+MO:  Ja. Eva!
 
 84
-00:03:49,000 --> 00:03:50,000
-Så vi bor i 16 etasje.
+00:04:08,000 --> 00:04:11,000
+MO:  Oi, nå rører hun på den andre armen også.
 
 85
-00:03:50,000 --> 00:03:51,000
-Dere bor i 16 etasje, ja.
+00:04:13,000 --> 00:04:18,000
+MO:  Nå ser hun på meg. Eva, Eva! Ja, nå ser hun på meg.
 
 86
-00:03:51,000 --> 00:03:52,000
-Ja, ja.
+00:04:20,000 --> 00:04:21,000
+MO:  Vent litt.
 
 87
-00:03:52,000 --> 00:03:54,000
-Hva er det som står på ringklokka dere så?
+00:04:26,000 --> 00:04:28,000
+MO:  Nå la jeg henne over på ryggen hennes, jeg må se.
 
 88
-00:03:54,000 --> 00:03:56,000
-Der står det Toralsdottir.
+00:04:28,000 --> 00:04:31,000
+MO:  Nå ser hun på meg. Eva, hei. Eva, Eva, hører du meg?
 
 89
-00:03:56,000 --> 00:03:57,000
-Toraldottir?
+00:04:32,000 --> 00:04:34,000
+MO:  Eva, Eva.
 
 90
-00:03:57,000 --> 00:04:00,000
-Ja, det stemmer. Ja, med H.
+00:04:35,000 --> 00:04:36,000
+MO:  Nå er hun våken.
 
 91
-00:04:00,000 --> 00:04:03,000
-Åja. Sånn.
+00:04:36,000 --> 00:04:38,000
+MO:  Snakker ikke, men hun ser på meg.
 
 92
-00:04:05,000 --> 00:04:09,000
-Okei, men da er det en ambulans på vei for å se på kona din nå.
+00:04:39,000 --> 00:04:40,000
+I:  Hun er litt våken nå?
 
 93
-00:04:09,000 --> 00:04:14,000
-Ja, det er bra. Vil du slå opp noe på Margit eller trenger du fødselsnummeren hennes?
+00:04:40,000 --> 00:04:42,000
+MO:  Ja, hun sier ingenting, hun bare ser på meg.
 
 94
-00:04:14,000 --> 00:04:16,000
-Ja, har du fødselsnummeren hennes da?
+00:04:42,000 --> 00:04:43,000
+I:  Ja.
 
 95
-00:04:16,000 --> 00:04:26,000
-Ja da. 2709, ja, 27097745312. Det kommer jeg. 27 ja ja.
+00:04:43,000 --> 00:04:45,000
+MO:  Sitter bare på meg, litt sånn rart og tungt.
 
 96
-00:04:28,000 --> 00:04:30,000
-Ja, men takk det var vet du.
+00:04:45,000 --> 00:04:46,000
+MO:  Eva.
 
 97
-00:04:30,000 --> 00:04:32,000
-Har det gitt noe bra med det?
+00:04:47,000 --> 00:04:48,000
+MO:  Hallo.
 
 98
-00:04:32,000 --> 00:04:35,000
-Ja, så bra. Nei men da venter vi bare her da, så kommer en ambulanse.
+00:04:48,000 --> 00:04:49,000
+MO:  Eva.
 
 99
-00:04:35,000 --> 00:04:37,000
-Ja, men da ligger hun. Hvor skal hun ligge eller?
+00:04:49,000 --> 00:04:50,000
+MO:  Nei.
 
 100
-00:04:37,000 --> 00:04:41,000
-Ja, hun har det ikke så veldig bra sånn som hun ligger. Jeg tror ikke jeg tørrer å flytte på henne.
+00:04:51,000 --> 00:04:52,000
+I:  Er hun fortsatt sløv?
 
 101
-00:04:41,000 --> 00:04:43,000
-Det er en stor dame vet du.
+00:04:53,000 --> 00:04:54,000
+MO:  Ja, hun er veldig rar.
 
 102
-00:04:43,000 --> 00:04:47,000
-Ja, ja. Også hvis hun har skadet hofta si også oppi dette.
+00:04:54,000 --> 00:04:55,000
+MO:  Ja, la henne ligge på siden du.
 
 103
-00:04:47,000 --> 00:04:49,000
-Ja, ja. Det er kanskje best å forsøke det da.
+00:04:56,000 --> 00:04:57,000
+MO:  Okei, ja, vent litt.
 
 104
-00:04:49,000 --> 00:04:50,000
-Jeg tror hun lurer ned der da.
+00:04:59,000 --> 00:05:00,000
+MO:  Sånn.
 
 105
-00:04:50,000 --> 00:04:52,000
-Har du lang tid da før bilen kommer?
+00:05:00,000 --> 00:05:01,000
+I:  Nå ligger hun ned på siden.
 
 106
-00:04:52,000 --> 00:04:54,000
-Nei, hun har ikke noen lang tid. Jeg er rett rundt hjørnet der allerede.
+00:05:01,000 --> 00:05:02,000
+I:  Ja.
 
 107
-00:04:54,000 --> 00:04:56,000
-Ja, ja, men det er supert.
+00:05:03,000 --> 00:05:05,000
+I:  Puster hun fortsatt normalt? Hæ, hva sa Ja. Puster hun fortsatt normalt?
 
 108
-00:04:56,000 --> 00:04:57,000
-Ja, men tusen takk da.
+00:05:05,000 --> 00:05:06,000
+I:  Hæ? Hva sa du?
 
 109
-00:04:57,000 --> 00:05:01,000
-Ja, hvis det hun blir noe verre, eller det skjer noe endring nå før ambulansen er der,
+00:05:06,000 --> 00:05:08,000
+MO:  Puster hun fortsatt normalt?
 
 110
-00:05:01,000 --> 00:05:03,000
-så skal du bare ringe tilbake igjen til meg da.
+00:05:08,000 --> 00:05:10,000
+I:  Ja, ja hun puster fortsatt normalt.
 
 111
-00:05:03,000 --> 00:05:05,000
-Da skal jeg ringe tilbake igjen.
+00:05:10,000 --> 00:05:11,000
+I:  Nå må du komme snart da, vær så snill.
 
 112
-00:05:05,000 --> 00:05:08,000
-Ja, det er greit. Og den time hos fastlegen må vi kanskje bare abestille.
+00:05:11,000 --> 00:05:13,000
+MO:  Ja, de er snart til hjelp hos dere.
 
 113
-00:05:09,000 --> 00:05:11,000
-Ja, det kan nok tenkes det.
+00:05:13,000 --> 00:05:17,000
+I:  Ja, jeg trenger hjelp. Jeg klarer ikke dette her alene. Jeg vet ikke hva jeg skal gjøre.
 
 114
-00:05:11,000 --> 00:05:14,000
-Men hvis du er litt i tvil, så kan du vente til sykebilen har kommet, ja.
+00:05:17,000 --> 00:05:18,000
+I:  Du klarer deg veldig fint nå.
 
 115
-00:05:14,000 --> 00:05:15,000
-Da skal de hjelpe deg.
+00:05:18,000 --> 00:05:20,000
+I:  Kommer det til å gå bra?
 
 116
-00:05:15,000 --> 00:05:16,000
-Ja, det kan vi gjøre.
+00:05:20,000 --> 00:05:22,000
+MO:  Det er veldig bra at hun er litt våken nå.
 
 117
-00:05:16,000 --> 00:05:17,000
-Ja.
+00:05:22,000 --> 00:05:23,000
+MO:  Ja.
 
 118
-00:05:17,000 --> 00:05:18,000
-Ja.
+00:05:23,000 --> 00:05:24,000
+MO:  Og at hun puster normalt.
 
 119
-00:05:18,000 --> 00:05:19,000
-Okei. Tusen takk da.
+00:05:24,000 --> 00:05:27,000
+MO:  Ja. Ja. Når er Eva født?
 
 120
-00:05:19,000 --> 00:05:20,000
-Ja, ha det da.
+00:05:28,000 --> 00:05:30,000
+MO:  Åh.
 
 121
-00:05:20,000 --> 00:05:21,000
-Ha det, ha det.
+00:05:39,000 --> 00:05:45,000
+MO:  Seistende i andre. 62. Hva var etternavnet hennes da?
+
+122
+00:05:45,000 --> 00:05:48,000
+MO:  Hun heter Ibrahimovič, er etternavn.
+
+123
+00:05:48,000 --> 00:05:50,000
+I:  Ja, takk.
+
+124
+00:05:52,000 --> 00:05:55,000
+I:  Nå skal jeg bli på telefonen med deg helt til ambulansen er fremme.
+
+125
+00:05:55,000 --> 00:05:56,000
+MO:  Ja.
+
+126
+00:05:56,000 --> 00:06:01,000
+I:  Du må være der med henne, og så følge med hele tiden på at hun puster normalt.
+
+127
+00:06:01,000 --> 00:06:03,000
+MO:  Ja. Nå ser det ut som at ambulansen kommer her faktisk.
+
+128
+00:06:03,000 --> 00:06:06,000
+I:  Det var veldig bra. Takk for hjelpen.
+
+129
+00:06:06,000 --> 00:06:07,000
+I:  Ja, lykke til videre. Ha det.
+
+130
+00:06:07,000 --> 00:06:09,000
+Takk, takk. Ha det.
 

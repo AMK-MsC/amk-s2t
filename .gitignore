@@ -31,3 +31,6 @@ yarn-error.log*
 
 # models
 /amk-whisper
+
+# data
+/audio
