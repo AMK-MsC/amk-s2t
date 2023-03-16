@@ -3,7 +3,7 @@ from flask_cors import CORS
 from transformers import WhisperForConditionalGeneration, WhisperProcessor, GenerationConfig, pipeline
 import librosa
 import torch
-from lib import generate_srt_file
+from lib import generate_srt_file, generate_srt_text
 
 app = Flask(__name__)
 CORS(app)
@@ -53,16 +53,18 @@ def audio():
     
 @app.route('/pipeline/audio', methods=['POST'])
 def transcribe_audio():
-    audio_file = request.files['audio']
-    print(f"file: {audio_file.filename.split('.')[0]}")
+    audio_file = request.files['file']
+    #print(f"file: {audio_file.filename.split('.')[0]}")
     audio, _ = librosa.load(audio_file, sr=16000)
 
     # we can also return timestamps for the predictions
     prediction = pipe(audio, return_timestamps=True)["chunks"]
 
-    generate_srt_file(prediction, f"{audio_file.filename.split('.')[0]}.srt")
+    # generate_srt_file(prediction, "{audio_file.filename.split('.')[0]}.srt")
+    srt_text = generate_srt_text(prediction)
+    print(prediction)
 
-    return jsonify(prediction)
+    return jsonify(srt_text)
 
         
 if __name__ == '__main__':

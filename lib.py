@@ -19,3 +19,17 @@ def format_time(seconds):
     seconds = int(seconds % 60)
     milliseconds = int((seconds - int(seconds)) * 1000)
     return f"{hours:02d}:{minutes:02d}:{seconds:02d},{milliseconds:03d}"
+
+def generate_srt_text(input_data):
+    output_text = ""
+    segment_index = 1
+    for segment_data in input_data:
+        start_time = segment_data['timestamp'][0]
+        end_time = segment_data['timestamp'][1]
+        text = segment_data['text']
+        output_text += f"{segment_index}\n"
+        output_text += f"{format_time(start_time)} --> {format_time(end_time)}\n"
+        output_text += f"{text.strip()}\n\n"
+
+        segment_index += 1
+    return output_text
