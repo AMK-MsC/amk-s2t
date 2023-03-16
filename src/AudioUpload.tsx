@@ -86,8 +86,8 @@ const AudioUpload = (): JSX.Element => {
                 <Box>
                     <Button
                         isLoading={loading}
-                        //loadingText='Submitting'
-                        //colorScheme='teal'
+                        loadingText='Transcribing'
+                        spinnerPlacement="end"
                         variant='outline'
                         onClick={() => transcribeAudio(audio!)}>Transcribe
                     </Button>
