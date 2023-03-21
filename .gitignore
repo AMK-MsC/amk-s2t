@@ -34,3 +34,5 @@ yarn-error.log*
 
 # data
 /audio
+output_lydlogg-2.srt
+.vscode/settings.json
