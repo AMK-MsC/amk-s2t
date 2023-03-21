@@ -28,3 +28,13 @@ yarn-error.log*
 /venv
 
 /__pycache__
+
+# models
+/amk-whisper
+
+# data
+/data
+
+
+.vscode/settings.json
+
