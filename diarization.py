@@ -8,7 +8,7 @@ pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_tok
 print("pyanote:",  datetime.datetime.now() - starttime)
 
 
-audio_file = "audio/Lydlogg-2-test-113.wav"
+audio_file = "audio/113-samtale test.wav"
 
 
 audio, sr = librosa.load(audio_file, sr=16000)
@@ -96,4 +96,4 @@ speaker_list = get_speaker_list(dz)
 
 labeled_predictions = label_transcriptions(predictions, speaker_list)
 
-generate_srt_file(labeled_predictions, "output_lydlogg-2.srt")
+generate_srt_file(labeled_predictions, "output_lydlogg-1.srt")
