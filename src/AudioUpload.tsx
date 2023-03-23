@@ -99,10 +99,9 @@ const AudioUpload = (): JSX.Element => {
                         handleChange={handleChange}
                         types={['WAV', 'MP3', 'M4A']}
                     />
-                    <Text>{audio ? `File name: ${audio.name}` : ""}</Text>
+                    <Text>{audio ? `${audio.name}` : ""}</Text>
                     <audio ref={audioRef} controls />
                 </VStack>
-                <Box>
                     <Button
                         isLoading={loading}
                         loadingText='Transcribing'
@@ -110,7 +109,6 @@ const AudioUpload = (): JSX.Element => {
                         variant='outline'
                         onClick={() => transcribeAudio(audio!)}>Transcribe
                     </Button>
-                </Box>
                 {docTranscript && (
                     <>
                         <Box padding="10px" borderRadius="2xl">
