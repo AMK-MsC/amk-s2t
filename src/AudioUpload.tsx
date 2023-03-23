@@ -1,5 +1,6 @@
 import { Box, Button, Center, HStack, Input, SimpleGrid, Text, Textarea, VStack } from "@chakra-ui/react";
 import { SetStateAction, useEffect, useRef, useState } from "react";
+import { FileUploader } from "react-drag-drop-files";
 import API from "./api";
 
 
@@ -18,19 +19,32 @@ const AudioUpload = (): JSX.Element => {
     // Upload audio from local file system
     const audioRef = useRef<HTMLAudioElement>(null);
 
+    // useEffect when audio is uploaded. Use uploadAudio function to set audio file
+    useEffect(() => {
+        if (audio) {
+            uploadAudio(audio);
+        }
+    }, [audio]);
 
-    const uploadAudio = async (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (file) {
-            setAudio(file);
-            setAudioFile(file);
-            const objectUrl = URL.createObjectURL(file);
+
+
+
+    const uploadAudio = async (audio: File) => {
+        if (audio) {
+            setAudioFile(audio);
+            const objectUrl = URL.createObjectURL(audio);
             console.log(objectUrl);
             if (audioRef.current) {
                 audioRef.current.src = objectUrl;
                 //audioRef.current.play();
             }
         }
+    };
+
+    //handle change function while file is uploaded. setFile to uploaded file
+    
+    const handleChange = (file: File) => {
+        setAudio(file);
     };
 
     const transcribeAudio = async (file: Blob) => {
@@ -79,10 +93,15 @@ const AudioUpload = (): JSX.Element => {
     return (
         <Center>
             <SimpleGrid columns={1} alignContent="center" gap={5}>
-                <Box>
-                    <input type="file" onChange={uploadAudio} />
+                <VStack spacing={5}>
+                    <FileUploader 
+                        multiple={false}
+                        handleChange={handleChange}
+                        types={['WAV', 'MP3', 'M4A']}
+                    />
+                    <Text>{audio ? `File name: ${audio.name}` : ""}</Text>
                     <audio ref={audioRef} controls />
-                </Box>
+                </VStack>
                 <Box>
                     <Button
                         isLoading={loading}
