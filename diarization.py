@@ -2,38 +2,39 @@ import librosa
 from pyannote.audio import Pipeline
 import torch
 import datetime
-
-starttime = datetime.datetime.now()
-pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_token="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")
-print("pyanote:",  datetime.datetime.now() - starttime)
-
-
-audio_file = "audio/113-samtale test.wav"
-
-
-audio, sr = librosa.load(audio_file, sr=16000)
-
-dz = pipeline(audio_file, min_speakers=2, max_speakers=5)
-print("diarization:", datetime.datetime.now() - starttime)
-
-
 from transformers import pipeline
 from lib import generate_srt_file
 
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
+# starttime = datetime.datetime.now()
+# pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_token="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")
+# print("pyanote:",  datetime.datetime.now() - starttime)
 
-pipe = pipeline(
-  "automatic-speech-recognition",
-  #model="oyvindgrutle/amk-whisper",
-  model="amk-whisper",  # Gets model from local instead of HuggingFace
-  chunk_length_s=30,
-  device=device,
-)
-print("pipeline whisper:", datetime.datetime.now() - starttime)
 
-predictions = pipe(audio_file, return_timestamps=True)["chunks"]
+# audio_file = "audio/113-samtale test.wav"
 
-print("predictions:", datetime.datetime.now() - starttime)
+
+# audio, sr = librosa.load(audio_file, sr=16000)
+
+# dz = pipeline(audio_file, min_speakers=2, max_speakers=5)
+# print("diarization:", datetime.datetime.now() - starttime)
+
+
+
+
+# device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+# pipe = pipeline(
+#   "automatic-speech-recognition",
+#   #model="oyvindgrutle/amk-whisper",
+#   model="amk-whisper",  # Gets model from local instead of HuggingFace
+#   chunk_length_s=30,
+#   device=device,
+# )
+# print("pipeline whisper:", datetime.datetime.now() - starttime)
+
+# predictions = pipe(audio_file, return_timestamps=True)["chunks"]
+
+# print("predictions:", datetime.datetime.now() - starttime)
 
 
 def get_speaker_list(diarization):
@@ -92,8 +93,8 @@ def find_bucket(speakers, transcription_median):
 
 
 
-speaker_list = get_speaker_list(dz)
+# speaker_list = get_speaker_list(dz)
 
-labeled_predictions = label_transcriptions(predictions, speaker_list)
+# labeled_predictions = label_transcriptions(predictions, speaker_list)
 
-generate_srt_file(labeled_predictions, "output_lydlogg-1.srt")
+# generate_srt_file(labeled_predictions, "output_lydlogg-1.srt")
