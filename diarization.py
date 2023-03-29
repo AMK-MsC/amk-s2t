@@ -39,27 +39,25 @@ from lib import generate_srt_file
 
 def get_speaker_list(diarization):
     speaker_list = []
-    speaker_mo = ""
-    speaker_i = ""
+    speaker_dict = {}
+
+
     for track in diarization.itertracks(yield_label=True):
         if track[0].start < 2:
             continue
 
         # Find the speaker labels
-        if not speaker_mo:
-            if track[2] == "SPEAKER_00":
-                speaker_mo = "SPEAKER_00"
-                speaker_i = "SPEAKER_01"
+        if len(speaker_dict) == 0:
+            speaker_dict[track[2]] = "MO"
+
+        elif track[2] not in speaker_dict.keys():
+            if len(speaker_dict) > 1:
+                speaker_dict[track[2]] = "I" + str(len(speaker_dict))
             else:
-                speaker_mo = "SPEAKER_01"
-                speaker_i = "SPEAKER_00"
+                speaker_dict[track[2]] = "I"
         
-        if track[2] == speaker_mo:
-            speaker_id = "MO"
-        elif track[2] == speaker_i:
-            speaker_id = "I"
-            
-        speaker_list.append([track[0].start, track[0].end, speaker_id])
+
+        speaker_list.append([track[0].start, track[0].end, speaker_dict[track[2]]])
     return speaker_list
 
 def label_transcriptions(transcriptions, speakers):
