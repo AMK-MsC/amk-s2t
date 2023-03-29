@@ -4,7 +4,7 @@ const API = {
         const data = new FormData();
         data.append("file", audio, "file");
         try {
-            const response = await fetch("http://localhost:5000/pipeline/audio",
+            const response = await fetch("http://localhost:5000/transcribe",
                 {
                     method: "POST",
                     body: data,
