@@ -1,8 +1,9 @@
 const API = {
     
-    transcribeAudio: async (audio: Blob) => {
+    transcribeAudio: async (audio: Blob, name: string) => {
         const data = new FormData();
-        data.append("file", audio, "file");
+        data.append("file", audio, name);
+        console.log(data)
         try {
             const response = await fetch("http://localhost:5000/transcribe",
                 {
@@ -10,15 +11,15 @@ const API = {
                     body: data,
                 }
             )
-            console.log(`Response status code: ${response.status}`)
-            if (response.status == 200) {
+            if (response.ok) {
                 const result = await response.json();
-                console.log(`Result: ${result}`);
                 return result;
+            } else {
+                throw new Error(`${response.status}`);
             }
         } catch (error) {
-            console.log(`Error: ${error}`);
-            return error;
+            console.log(`${error}`);
+            return null;
         }
     },
 }

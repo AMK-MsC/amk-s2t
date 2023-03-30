@@ -12,7 +12,6 @@ const AudioUpload = (): JSX.Element => {
     const [loading, setLoading] = useState<boolean>(false);
     const [srtTranscript, setSrt] = useState<string>();
     const [docTranscript, setDocTranscript] = useState<string>();
-    const [audioUrl, setAudioUrl] = useState<string>();
 
 
 
@@ -36,27 +35,34 @@ const AudioUpload = (): JSX.Element => {
             console.log(objectUrl);
             if (audioRef.current) {
                 audioRef.current.src = objectUrl;
-                //audioRef.current.play();
             }
         }
     };
 
     //handle change function while file is uploaded. setFile to uploaded file
-    
+
     const handleChange = (file: File) => {
         setAudio(file);
     };
 
     const transcribeAudio = async (file: Blob) => {
         setLoading(true);
+        setDocTranscript("");
         if (!file) {
             setLoading(false);
             return;
         }
-        const response = await API.transcribeAudio(file);
-        setLoading(false);
-        setDocTranscript(response.doc_text);
-        setSrt(response.srt_text);
+        try {
+            const response = await API.transcribeAudio(file, audioFile!.name);
+            setLoading(false);
+            setDocTranscript(response.doc_text);
+            setSrt(response.srt_text);
+        } catch (error) {
+            setDocTranscript("An error occurred while transcribing the audio. Please try again.");
+            console.log(error);
+            setLoading(false);
+        }
+
     };
 
     // download transcript as a doc file
@@ -94,21 +100,21 @@ const AudioUpload = (): JSX.Element => {
         <Center>
             <SimpleGrid columns={1} alignContent="center" gap={5}>
                 <VStack spacing={5}>
-                    <FileUploader 
+                    <FileUploader
                         multiple={false}
                         handleChange={handleChange}
-                        types={['WAV', 'MP3', 'M4A']}
+                        types={['WAV']}
                     />
                     <Text>{audio ? `${audio.name}` : ""}</Text>
                     <audio ref={audioRef} controls />
                 </VStack>
-                    <Button
-                        isLoading={loading}
-                        loadingText='Transcribing'
-                        spinnerPlacement="end"
-                        variant='outline'
-                        onClick={() => transcribeAudio(audio!)}>Transcribe
-                    </Button>
+                <Button
+                    isLoading={loading}
+                    loadingText='Transcribing'
+                    spinnerPlacement="end"
+                    variant='outline'
+                    onClick={() => transcribeAudio(audio!)}>Transcribe
+                </Button>
                 {docTranscript && (
                     <>
                         <Box padding="10px" borderRadius="2xl">
