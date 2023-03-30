@@ -43,8 +43,8 @@ def get_speaker_list(diarization):
 
 
     for track in diarization.itertracks(yield_label=True):
-        if track[0].start < 2:
-            continue
+        # if track[0].start < 2:
+        #     continue
 
         # Find the speaker labels
         if len(speaker_dict) == 0:

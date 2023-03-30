@@ -30,11 +30,14 @@ dz_pipeline = Pipeline.from_pretrained(
 @app.route('/transcribe', methods=['POST'])
 def transcribe_audio():
     audio_file = request.files['file']
+    # print entire file name'
+    print(audio_file.filename)
+    file_name = audio_file.filename
 
-    audio_file.save('audio.wav')
+    audio_file.save(file_name)
 
-    transcription = whisper_pipeline("audio.wav", return_timestamps=True)["chunks"]
-    dz = dz_pipeline("audio.wav", min_speakers=2, max_speakers=5)
+    transcription = whisper_pipeline(file_name, return_timestamps=True)["chunks"]
+    dz = dz_pipeline(file_name, min_speakers=2, max_speakers=5)
 
     speaker_list = get_speaker_list(dz)
 
