@@ -1,4 +1,4 @@
-import { Box, Button, Center, HStack, Input, SimpleGrid, Text, Textarea, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, HStack, Input, SimpleGrid, Text, Textarea, VStack, useColorModeValue, useToast } from "@chakra-ui/react";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import API from "./api";
@@ -12,6 +12,9 @@ const AudioUpload = (): JSX.Element => {
     const [loading, setLoading] = useState<boolean>(false);
     const [srtTranscript, setSrt] = useState<string>();
     const [docTranscript, setDocTranscript] = useState<string>();
+    const toast = useToast();
+
+    const fontColor = useColorModeValue("mode.text.light", "mode.text.dark");
 
 
 
@@ -58,9 +61,13 @@ const AudioUpload = (): JSX.Element => {
             setDocTranscript(response.doc_text);
             setSrt(response.srt_text);
         } catch (error) {
-            setDocTranscript("An error occurred while transcribing the audio. Please try again.");
-            console.log(error);
-            setLoading(false);
+            toast({
+                title: "En feil har oppstått.",
+                description: "Det skjedde en feil under transkripsjonen. Prøv igjen senere.",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+              });
         }
 
     };
@@ -126,14 +133,17 @@ const AudioUpload = (): JSX.Element => {
                                 onChange={handleTranscriptChange}
                             />
                         </Box>
-                        <HStack>
-                            <Button onClick={downloadTranscript}>Download Transcript as .doc</Button>
-                            <Button onClick={downloadTranscriptSrt}>Download Transcript as .srt</Button>
-                        </HStack>
+                        <Center> {/* Wrap the buttons in a Center component */}
+                            <HStack>
+                                <Button bgColor={fontColor} onClick={downloadTranscript}>Download transcript as .doc</Button>
+                                <Button onClick={downloadTranscriptSrt}>Download original transcript as .srt</Button>
+                            </HStack>
+                        </Center>
                     </>
                 )}
             </SimpleGrid>
         </Center>
+
     );
 
 };
