@@ -23,3 +23,20 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vscode
+
+*.wav
+*.mp3
+
+/venv
+
+/__pycache__
+
+# models
+/amk-whisper
+
+# data
+/data
+
+
+.vscode/settings.json
+
