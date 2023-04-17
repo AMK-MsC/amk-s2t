@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#Hide node_modules from frontend directory
+/frontend/node_modules/
+
 # testing
 /coverage
 
@@ -29,7 +32,7 @@ yarn-error.log*
 
 /venv
 
-/__pycache__
+*/__pycache__
 
 # models
 /amk-whisper
