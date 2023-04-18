@@ -1,6 +1,6 @@
-# Monorepo Project Name
+# AMK Speech-to-Text
 
-A brief description of the monorepo project goes here. Explain the purpose of the project, its main features, and what problem it solves.
+Mono-repository for AMK Speech-to-Text
 
 ## Table of Contents
 
@@ -11,7 +11,6 @@ A brief description of the monorepo project goes here. Explain the purpose of th
   - [Frontend](#frontend)
   - [Backend](#backend)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Getting Started
@@ -39,16 +38,16 @@ pip --version
 
 ### Installation
 
-1. Clone the monorepo:
+1. Clone the repo:
 
 ```sh
 git clone https://github.com/your-username/monorepo-project-name.git
 ```
 
-2. Change into the monorepo project directory:
+2. Change into the amk-s2t:
 
 ```sh
-cd monorepo-project-name
+cd amk-s2t
 ```
 
 #### Frontend
@@ -67,7 +66,7 @@ yarn
 
 #### Backend
 
-5. Change back to the root of the monorepo and then into the backend directory:
+5. Change back to the root of the amk-s2t and then into the backend directory:
 
 ```sh
 cd ../backend
