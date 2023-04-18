@@ -6,7 +6,7 @@
 .pnp.js
 
 #Hide node_modules from frontend directory
-/frontend/node_modules/
+*/node_modules/
 
 # testing
 /coverage
