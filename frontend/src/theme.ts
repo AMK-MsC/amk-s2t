@@ -22,12 +22,12 @@ const theme = extendTheme({
         dark: "gray.800",
       },
       text: {
-        light: "lightblue",
-        dark: "blue",
+        light: "#bee3f8",
+        dark: "#2a4365",
       },
-      header: {
-        light: "blue.600",
-        dark: "blue.100",
+      heading: {
+        light: "#1A365D",
+        dark: "#bee3f8",
       },
     },
   },
