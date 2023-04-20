@@ -5,6 +5,7 @@ import torch
 from lib import generate_srt_text, generate_doc_text
 from pyannote.audio import Pipeline
 from diarization import get_speaker_list, label_transcriptions
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -32,12 +33,14 @@ def transcribe_audio():
     audio_file = request.files['file']
     # print entire file name'
     print(audio_file.filename)
-    file_name = audio_file.filename
+    file_name = "temp-data/"+audio_file.filename
 
     audio_file.save(file_name)
 
     transcription = whisper_pipeline(file_name, return_timestamps=True)["chunks"]
     dz = dz_pipeline(file_name, min_speakers=2, max_speakers=5)
+
+    os.remove(file_name)
 
     speaker_list = get_speaker_list(dz)
 
