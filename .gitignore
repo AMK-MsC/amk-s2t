@@ -35,11 +35,10 @@ yarn-error.log*
 */__pycache__
 
 # models
-/amk-whisper
+amk-whisper*
 
 # data
-/data
+data/
 
 
 .vscode/settings.json
-
