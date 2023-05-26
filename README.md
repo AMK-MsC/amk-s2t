@@ -1,5 +1,5 @@
 # AMK Speech-to-Text
-
+ 
 Mono-repository for AMK Speech-to-Text
 
 ## Table of Contents
