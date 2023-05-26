@@ -10,7 +10,6 @@ Mono-repository for AMK Speech-to-Text
 - [Usage](#usage)
   - [Frontend](#frontend)
   - [Backend](#backend)
-- [Contributing](#contributing)
 - [Contact](#contact)
 
 ## Getting Started
