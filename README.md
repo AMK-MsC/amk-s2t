@@ -62,7 +62,7 @@ cd frontend
 ```sh
 yarn
 ```
-
+ 
 #### Backend
 
 5. Change back to the root of the amk-s2t and then into the backend directory:
