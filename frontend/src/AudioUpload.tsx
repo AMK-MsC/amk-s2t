@@ -62,8 +62,8 @@ const AudioUpload = (): JSX.Element => {
             setSrt(response.srt_text);
         } catch (error) {
             toast({
-                title: "En feil har oppstått.",
-                description: "Det skjedde en feil under transkripsjonen. Prøv igjen senere.",
+                title: "An error has occured.",
+                description: "An error occurred during the transcription. Try again later.",
                 status: "error",
                 duration: 5000,
                 isClosable: true,
