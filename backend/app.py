@@ -18,9 +18,14 @@ else:
 
 whisper_pipeline = pipeline(
   "automatic-speech-recognition",
-  model="oyvindgrutle/amk-whisper",
+  #model="openai/whisper-large-v2",
+  model="amk-whisper-local",
   chunk_length_s=30,
   device=device,
+  generate_kwargs={
+        "language":"<|no|>",
+        "task":"transcribe"
+  }
 )
 
 dz_pipeline = Pipeline.from_pretrained(
@@ -34,7 +39,6 @@ def transcribe_audio():
     # print entire file name'
     print(audio_file.filename)
     file_name = "temp-data/"+audio_file.filename
-
     audio_file.save(file_name)
 
     transcription = whisper_pipeline(file_name, return_timestamps=True)["chunks"]
