@@ -1,6 +1,25 @@
 # AMK Speech-to-Text
  
-Mono-repository for AMK Speech-to-Text
+This mono-repo consist of the code we have developed during our master thesis, a full-stack application developed to streamline the process of transcribing Norwegian emergency calls. The front-end is developed using React, TypeScript and Chakra UI. The back-end is developed using Hugging Face's Transformer library, and Python's Flask.   
+
+## Front-end
+
+The front-end consist of a simple page where the user is able to upload a single audio clip to get the audio automatically transcribed. The transcription is displayed in an editable window, with the option to download the transcription as either a DOC file or as a SRT file. The SRT format makes it possible to listen to the audio together with the transcription as subtitles. 
+
+## Back-end
+
+The back-end is designed to receive a POST request from the front-end, with the audio clip in the request body. The back-end automatically transcribes the audio using our fine-tuned model, and returns the transcription.
+
+## Notebooks
+
+This folder contains the Jupyter notebooks for training and evaluating the model.
+
+
+| Notebooks    |
+|:----------|
+|  [Finetuning.ipynb](https://github.com/AMK-MsC/amk-s2t/blob/master/notebooks/Finetuning.ipynb)  |
+|  [Evaluation.ipynb](https://github.com/AMK-MsC/amk-s2t/blob/master/notebooks/Evaluation.ipynb)  |
+---
 
 ## Table of Contents
 
